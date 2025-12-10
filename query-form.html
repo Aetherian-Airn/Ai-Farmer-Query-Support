@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Farming Query Support</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; }
+    h1 { text-align: center; }
+    label { display: block; margin-top: 10px; font-weight: 600; }
+    input, select, textarea, button {
+      width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box;
+    }
+    button { margin-top: 15px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>AI Farming Query Form</h1>
+  <form action="/query" method="POST">
+    <label>Farmer Name
+      <input type="text" name="name" required />
+    </label>
+
+    <label>Phone Number
+      <input type="tel" name="phone" required />
+    </label>
+
+    <label>Location (Village / City, State)
+      <input type="text" name="location" required />
+    </label>
+
+    <label>Soil Type
+      <select name="soilType" required>
+        <option value="">-- Select soil type --</option>
+        <option value="alluvial">Alluvial</option>
+        <option value="black">Black (Regur)</option>
+        <option value="red">Red</option>
+        <option value="laterite">Laterite</option>
+        <option value="desert">Desert</option>
+        <option value="mountain">Mountain / Forest</option>
+        <option value="other">Other / Not sure</option>
+      </select>
+    </label>
+
+    <label>Crop Name
+      <input type="text" name="crop" required />
+    </label>
+
+    <label>Issue Type
+      <select name="issueType" required>
+        <option value="">-- Select --</option>
+        <option value="pest">Pest attack</option>
+        <option value="disease">Leaf/plant disease</option>
+        <option value="nutrient">Nutrient / fertilizer issue</option>
+        <option value="water">Irrigation / water issue</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+
+    <label>Describe Your Problem
+      <textarea name="description" rows="4" placeholder="Explain symptoms, days since you noticed, recent spray/fertilizer used..." required></textarea>
+    </label>
+
+    <label>Preferred Language
+      <select name="language">
+        <option value="english">English</option>
+        <option value="hindi">Hindi</option>
+      </select>
+    </label>
+
+    <button type="submit">Submit Query</button>
+  </form>
+</body>
+</html>
