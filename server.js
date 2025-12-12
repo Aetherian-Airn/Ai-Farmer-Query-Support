@@ -8,7 +8,7 @@ const app = express();
 // TODO: put your real MongoDB connection string here:
 const MONGO_URL = "mongodb://localhost:27017/";
 // TODO: put your real Gemini API key here:
-const GEMINI_API_KEY = "AIzaSyCAZY7ZCyh3cVYe9HLik6gpmdr30Yx0B3Y";
+const GEMINI_API_KEY = "Your api key BITCH";
 
 // --- MongoDB connection ---
 mongoose
@@ -292,3 +292,4 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+
